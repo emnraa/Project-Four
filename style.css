@@ -1,0 +1,114 @@
+/* Making snap Slideshow */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  overflow-y: hidden;
+}
+.slider {
+  font-family: sans-serif;
+  scroll-snap-type: x mandatory;
+  display: flex;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: scroll;
+}
+section {
+  border-right: 1px solid white;
+  padding: 1rem;
+  min-width: 100vw;
+  height: 100vh;
+  scroll-snap-align: start;
+  text-align: center;
+  position: relative;
+}
+
+/* styling */
+h1 {
+  position: relative;
+  top: 30%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: black;
+  width: 100%;
+  left: 0;
+  font-size: calc(1rem + 3vw);
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+h2 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+h3 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+p {
+  margin-top: 20px;
+  margin-left: 300px;
+  margin-right: 300px;
+  padding: 30px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+#research {
+  position: absolute;
+  bottom: 0%;
+  width: 10em;
+  height: 15 em;
+}
+
+#sketch {
+  position: absolute;
+  bottom: 0%;
+  width: 13em;
+  height: 17 em;
+  right: 40%;
+}
+
+#cut {
+  position: absolute;
+  bottom: 0%;
+  width: 13em;
+  height: 17 em;
+  right: 40%;
+}
+
+#model {
+  position: absolute;
+  bottom: 0%;
+  width: 13em;
+  height: 17 em;
+  right: 40%;
+}
+
+#dress {
+  position: absolute;
+  top: 40%;
+}
+
+#runway {
+  position: absolute;
+  bottom: 20%;
+  width: 15em;
+  height: 20 em;
+  right: 40%;
+}
+
+/*2 column layout*/
+.column {
+  float: left;
+  width: 50%;
+  margin: auto;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+
+  display: table;
+  clear: both;
+}
