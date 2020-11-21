@@ -59,10 +59,8 @@
             height="200"
             style="border: 2px solid black"
           ></canvas>
+
           <br /><br />
-          <button onclick="javascript:clearArea();return false;">
-            Clear Area
-          </button>
           Line width :
           <select id="selWidth">
             <option value="1">1</option>
@@ -81,6 +79,9 @@
             <option value="yellow">yellow</option>
             <option value="gray">gray</option>
           </select>
+          <button class="clear" onclick="javascript:clearArea();return false;">
+            Clear Area
+          </button>
         </div>
         <img id="sketch" src="./images/Drawing.png" alt="" />
       </section>
@@ -113,27 +114,37 @@
           A toile is then made from the patterns, providing the basis of the
           completed product. There is lots of pinning, draping and adjusting
           involved so that when the final piece is made, it fits just right.
-          <img id="model" src="./images/Model.png" alt="" /><img
-            id="dress"
-            src="./images/Template-Dress.png"
-            alt=""
-          />
         </p>
+
+        <img id="model" src="./images/Model.png" alt="" />
+
+        <img id="dress" src="./images/Template-Dress.png" alt="" />
       </section>
 
       <section>
         <h2>Sewing the Final Fabric</h2>
         <p>
           Finally, the fabric that the designer had in mind is used to create
-          their piece going off the basis of the toile, which provides the
+          their piece going off the basis of the toile, which provided the
           outline. This is when the garment starts coming alive with the colors,
           and texture that one would be able to see in the initial sketch. If
           adjustments were made in the toile, the same would be made in the new
           pattern.
-          <img src="./images/Sewing-Top.png" alt="" />
-          <img src="./images/Fabric.png" alt="" />
-          <img src="./images/Sewing-Bottom.png" alt="" />
         </p>
+        <div>
+          <img id="image1" src="./images/Sewing-Top.png" alt="" />
+        </div>
+        <div>
+          <img
+            id="image2"
+            class="animate__animated animate__shakeY animate__infinite"
+            src="./images/Fabric.png"
+            alt=""
+          />
+        </div>
+        <div>
+          <img id="image3" src="./images/Sewing-Bottom.png" alt="" />
+        </div>
       </section>
 
       <section>
@@ -144,17 +155,45 @@
           they wanted, and a critical eye is used to asses every little detail
           to perfection before it goes out onto the runway.
         </p>
-        <img id="runway" src="./images/Runway.png" alt="" />
+        <img id="runway" src="./images/walk-gif.gif" alt="" />
       </section>
 
       <section>
-        <h2>Final Touches</h2>
-        <p>
-          Once the garment is made, the designer drapes the garment onto the
-          model or onto a mannequin. They need to make sure it falls just as
-          they wanted, and a critical eye is used to asses every little detail
-          to perfection before it goes out onto the runway.
-        </p>
+        <h2>Age of Success for Fashion Designers</h2>
+        <div
+          class="flourish-embed flourish-chart"
+          data-src="visualisation/4419988"
+        >
+          <script src="https://public.flourish.studio/resources/embed.js"></script>
+        </div>
+        <!-- Button to open the modal -->
+        <button onclick="document.getElementById('id01').style.display='block'">
+          Sources
+        </button>
+
+        <!-- The Modal (contains the Sign Up form) -->
+        <div id="id01" class="modal">
+          <span
+            onclick="document.getElementById('id01').style.display='none'"
+            class="close"
+            title="Close Modal"
+            >X</span
+          >
+          <form class="modal-content" action="/action_page.php">
+            <div class="container">
+              <ul>
+                <li>
+                  https://artsandculture.google.com/exhibit/12-stages-of-making-a-dress-with-a-fashion-student-manuella-numfor-mcensal-school-of-fashion-and-design/1gJCCV3zcuNLJA?hl=en
+                </li>
+                <li>
+                  https://fashioninsiders.co/toolkit/business-basics/fashion-design-process-part2/
+                </li>
+                <li>https://chart-studio.plotly.com/~ktcook/41.embed</li>
+              </ul>
+              <div class="clearfix"></div>
+            </div>
+          </form>
+        </div>
       </section>
     </div>
   </body>
