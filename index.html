@@ -86,9 +86,7 @@
             <option value="yellow">yellow</option>
             <option value="gray">gray</option>
           </select>
-          <button class="clear" onclick="javascript:clearArea();return false;">
-            Clear Area
-          </button>
+          <button id="clear-canvas-button" class="clear">Clear Area</button>
         </div>
         <img
           id="sketch"
@@ -211,18 +209,11 @@
           data-src="visualisation/4419988"
         ></div>
         <!-- Button to open the modal -->
-        <button onclick="document.getElementById('id01').style.display='block'">
-          Sources
-        </button>
+        <button id="open-button">Sources</button>
 
         <!-- The Modal (contains the Sign Up form) -->
-        <div id="id01" class="modal">
-          <span
-            onclick="document.getElementById('id01').style.display='none'"
-            class="close"
-            title="Close Modal"
-            >X</span
-          >
+        <div id="modal" class="modal">
+          <span id="close-button" class="close" title="Close Modal">X</span>
           <form class="modal-content" action="/action_page.php">
             <div class="container">
               <ul>

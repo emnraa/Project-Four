@@ -39,18 +39,35 @@ function Draw(x, y, isDown) {
   lastY = y;
 }
 
+var clearCanvasButton = document.querySelector("#clear-canvas-button");
+
 function clearArea() {
   // Use the identity matrix while clearing the canvas
   ctx.setTransform(1, 0, 0, 1, 0, 0);
   ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
 }
 
-// Get the modal
-var modal = document.getElementById("id01");
+clearCanvasButton.addEventListener("click", clearArea);
+
+// Get the modal elements
+var modal = document.querySelector("#modal");
+var openButton = document.querySelector("#open-button");
+var closeButton = document.querySelector("#close-button");
+
+// Define behavior
+function openModal() {
+  modal.style.display = "block";
+}
+
+function closeModal() {
+  modal.style.display = "none";
+}
+
+// Wire it up
+openButton.addEventListener("click", openModal);
+closeButton.addEventListener("click", closeModal);
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
+  if (event.target == modal) closeModal();
 };
