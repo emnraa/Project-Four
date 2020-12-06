@@ -2,10 +2,11 @@
 
 * {
   box-sizing: border-box;
+}
+
+body {
   margin: 0;
   padding: 0;
-}
-body {
   overflow-y: hidden;
 }
 .slider {
@@ -45,6 +46,10 @@ h2 {
 
 h3 {
   font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+ul {
+  text-align: left;
 }
 
 p {
