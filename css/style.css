@@ -56,6 +56,7 @@ p {
 
 img {
   display: block;
+  width: 100%;
 }
 
 .pointing-and-thinking {
@@ -77,11 +78,8 @@ img {
 }
 
 #cut {
-  position: absolute;
-  bottom: 0%;
-  width: 13em;
-  height: 17 em;
-  right: 40%;
+  max-width: 200px;
+  margin: 0 auto;
 }
 
 #model {
@@ -304,4 +302,18 @@ section#home {
 
 section#home > div {
   max-width: 960px;
+}
+
+#sleeve {
+  max-width: 100px;
+  margin: 0 auto;
+}
+
+#shirt {
+  max-height: 200px;
+  width: auto;
+  margin: 0 auto;
+}
+
+#template {
 }
