@@ -93,11 +93,8 @@ img {
 }
 
 #runway {
-  position: absolute;
-  left: 28%;
-  width: 40em;
-  height: 30 em;
-  right: 30%;
+  max-width: 500px;
+  margin: 50px auto 0 auto;
 }
 
 #walk {
