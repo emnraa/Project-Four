@@ -54,11 +54,21 @@ p {
   font-family: "Courier New", Courier, monospace;
 }
 
-#research {
-  position: absolute;
-  bottom: 0%;
-  width: 10em;
-  height: 15 em;
+img {
+  display: block;
+}
+
+.pointing-and-thinking {
+  max-width: 350px;
+  margin: 100px auto 0 auto;
+}
+
+.pointing-and-thinking > img {
+  width: 50%;
+}
+
+.pointing-and-thinking > img:last-child {
+  float: right;
 }
 
 #sketch {
