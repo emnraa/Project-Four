@@ -276,7 +276,16 @@ hr {
   border-radius: 10px;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
-  margin: 10px;
   width: 90px;
   height: 40px;
+}
+
+#canvas-tools {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#canvas-tools > div {
+  margin: 10px;
 }
