@@ -83,16 +83,13 @@ img {
 }
 
 #model {
-  position: absolute;
-  bottom: 0%;
-  width: 13em;
-  height: 17 em;
-  right: 40%;
+  max-width: 125px;
+  margin: 0 auto;
 }
 
 #dress {
-  position: left;
-  top: 40%;
+  max-width: 125px;
+  margin: 50px auto 0 auto;
 }
 
 #runway {
