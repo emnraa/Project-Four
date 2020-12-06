@@ -23,232 +23,250 @@
   <body>
     <div class="slider">
       <section>
-        <h1>
-          From Sketchbook to the Runway: The Process of a Fashion Designer
-        </h1>
-      </section>
-      <section>
-        <h2>Research and Idea Development</h2>
-        <p>
-          Ideas always come from a source of inspiration. Good designs come from
-          conducting research, much like the start of any other project.
-          Designers gather information, aesthetics, inspiration and often
-          combine them to make mood boards as a visual representation. Once an
-          idea starts to form, this is when we start sketching it out.
-        </p>
-        <img
-          class="animate__animated animate__bounce animate__infinite"
-          src="./img/bubble.png"
-          alt="Thought bubble."
-        />
-        <img
-          id="research"
-          src="./img/pointing.png"
-          alt="Person with purple hair, a yellow shirt, and blush skin points upward with their right hand."
-        />
-      </section>
-
-      <section>
-        <h2>Sketching and Design Concept</h2>
-
-        <p>
-          While sketching the piece, a designer needs to take into account
-          several factors for when the piece actually becomes tangible. Things
-          like color, structure, structure or texture are all things that are
-          kept in mind. The final sketch is the framework of any piece.
-        </p>
-
-        <h3>Sketch Your Ideas!</h3>
         <div>
-          <canvas
-            id="myCanvas"
-            width="500"
-            height="200"
-            style="border: 2px solid black"
-          ></canvas>
-          <div id="canvas-tools">
-            <div>
-              <label for="selWidth">Line width:</label>
-              <select id="selWidth" name="selWidth">
-                <option value="1">1</option>
-                <option value="3">3</option>
-                <option value="5">5</option>
-                <option value="7">7</option>
-                <option value="9" selected="selected">9</option>
-                <option value="11">11</option>
-              </select>
-            </div>
-            <div>
-              <label for="selColor">Color:</label>
-              <select id="selColor" name="selColor">
-                <option value="black">black</option>
-                <option value="blue" selected="selected">blue</option>
-                <option value="red">red</option>
-                <option value="green">green</option>
-                <option value="yellow">yellow</option>
-                <option value="gray">gray</option>
-              </select>
-            </div>
-            <div>
-              <button id="clear-canvas-button" class="clear">Clear Area</button>
-            </div>
-          </div>
+          <h1>
+            From Sketchbook to the Runway: The Process of a Fashion Designer
+          </h1>
         </div>
-        <img
-          id="sketch"
-          src="./img/drawing.png"
-          alt="Person with purple hair, a yellow shirt, and blush skin leans over and draws on a piece of paper."
-        />
       </section>
-
       <section>
-        <h2>Making Patterns</h2>
-        <p>
-          In fashion design, patterns are essentially the templates used before
-          assembling a final piece. It is similar to making a gingerbread house-
-          all of the pieces start flat, but are arranged together to create a 3D
-          model. They are traced onto fabric to be cut and assembled to form the
-          basis of a toile.
-        </p>
-        <div id="sleeve">
+        <div>
+          <h2>Research and Idea Development</h2>
+          <p>
+            Ideas always come from a source of inspiration. Good designs come
+            from conducting research, much like the start of any other project.
+            Designers gather information, aesthetics, inspiration and often
+            combine them to make mood boards as a visual representation. Once an
+            idea starts to form, this is when we start sketching it out.
+          </p>
           <img
-            src="./img/sleeve-template.png"
-            alt="Template used to tailor sleeves."
+            class="animate__animated animate__bounce animate__infinite"
+            src="./img/bubble.png"
+            alt="Thought bubble."
+          />
+          <img
+            id="research"
+            src="./img/pointing.png"
+            alt="Person with purple hair, a yellow shirt, and blush skin points upward with their right hand."
           />
         </div>
-        <div class="row">
-          <div class="column">
+      </section>
+
+      <section>
+        <div>
+          <h2>Sketching and Design Concept</h2>
+
+          <p>
+            While sketching the piece, a designer needs to take into account
+            several factors for when the piece actually becomes tangible. Things
+            like color, structure, structure or texture are all things that are
+            kept in mind. The final sketch is the framework of any piece.
+          </p>
+
+          <h3>Sketch Your Ideas!</h3>
+          <div>
+            <canvas
+              id="myCanvas"
+              width="500"
+              height="200"
+              style="border: 2px solid black"
+            ></canvas>
+            <div id="canvas-tools">
+              <div>
+                <label for="selWidth">Line width:</label>
+                <select id="selWidth" name="selWidth">
+                  <option value="1">1</option>
+                  <option value="3">3</option>
+                  <option value="5">5</option>
+                  <option value="7">7</option>
+                  <option value="9" selected="selected">9</option>
+                  <option value="11">11</option>
+                </select>
+              </div>
+              <div>
+                <label for="selColor">Color:</label>
+                <select id="selColor" name="selColor">
+                  <option value="black">black</option>
+                  <option value="blue" selected="selected">blue</option>
+                  <option value="red">red</option>
+                  <option value="green">green</option>
+                  <option value="yellow">yellow</option>
+                  <option value="gray">gray</option>
+                </select>
+              </div>
+              <div>
+                <button id="clear-canvas-button" class="clear">
+                  Clear Area
+                </button>
+              </div>
+            </div>
+          </div>
+          <img
+            id="sketch"
+            src="./img/drawing.png"
+            alt="Person with purple hair, a yellow shirt, and blush skin leans over and draws on a piece of paper."
+          />
+        </div>
+      </section>
+
+      <section>
+        <div>
+          <h2>Making Patterns</h2>
+          <p>
+            In fashion design, patterns are essentially the templates used
+            before assembling a final piece. It is similar to making a
+            gingerbread house- all of the pieces start flat, but are arranged
+            together to create a 3D model. They are traced onto fabric to be cut
+            and assembled to form the basis of a toile.
+          </p>
+          <div id="sleeve">
             <img
-              src="./img/shirt-template.png"
-              alt="Template used to tailor shirts."
+              src="./img/sleeve-template.png"
+              alt="Template used to tailor sleeves."
             />
           </div>
-          <div class="column">
+          <div class="row">
+            <div class="column">
+              <img
+                src="./img/shirt-template.png"
+                alt="Template used to tailor shirts."
+              />
+            </div>
+            <div class="column">
+              <img
+                src="./img/template.png"
+                alt="Template used to design garmets."
+              />
+            </div>
+          </div>
+
+          <img
+            id="cut"
+            src="./img/cutting-templates.png"
+            alt="Person with purple hair, a yellow shirt, and blush skin holds scissors and prepares to cut fabric."
+          />
+        </div>
+      </section>
+
+      <section>
+        <div>
+          <h2>The Fitting</h2>
+          <p>
+            A toile is then made from the patterns, providing the basis of the
+            completed product. There is lots of pinning, draping and adjusting
+            involved so that when the final piece is made, it fits just right.
+          </p>
+
+          <img
+            id="model"
+            src="./img/model.png"
+            alt="Model is fitted for dress."
+          />
+
+          <img
+            id="dress"
+            src="./img/dress-template.png"
+            alt="Template used to tailor dresses."
+          />
+        </div>
+      </section>
+
+      <section>
+        <div>
+          <h2>Sewing the Final Fabric</h2>
+          <p>
+            Finally, the fabric that the designer had in mind is used to create
+            their piece going off the basis of the toile, which provided the
+            outline. This is when the garment starts coming alive with the
+            colors, and texture that one would be able to see in the initial
+            sketch. If adjustments were made in the toile, the same would be
+            made in the new pattern.
+          </p>
+          <div>
             <img
-              src="./img/template.png"
-              alt="Template used to design garmets."
+              id="image1"
+              src="./img/sewing-top.png"
+              alt="Top of blue sewing machine, loaded with red thread."
+            />
+          </div>
+          <div>
+            <img
+              id="image2"
+              class="animate__animated animate__shakeY animate__infinite"
+              src="./img/Fabric.png"
+              alt="Red, partially stitched fabric."
+            />
+          </div>
+          <div>
+            <img
+              id="image3"
+              src="./img/sewing-bottom.png"
+              alt="Bottom of blue sewing machine."
             />
           </div>
         </div>
-
-        <img
-          id="cut"
-          src="./img/cutting-templates.png"
-          alt="Person with purple hair, a yellow shirt, and blush skin holds scissors and prepares to cut fabric."
-        />
       </section>
 
       <section>
-        <h2>The Fitting</h2>
-        <p>
-          A toile is then made from the patterns, providing the basis of the
-          completed product. There is lots of pinning, draping and adjusting
-          involved so that when the final piece is made, it fits just right.
-        </p>
-
-        <img
-          id="model"
-          src="./img/model.png"
-          alt="Model is fitted for dress."
-        />
-
-        <img
-          id="dress"
-          src="./img/dress-template.png"
-          alt="Template used to tailor dresses."
-        />
-      </section>
-
-      <section>
-        <h2>Sewing the Final Fabric</h2>
-        <p>
-          Finally, the fabric that the designer had in mind is used to create
-          their piece going off the basis of the toile, which provided the
-          outline. This is when the garment starts coming alive with the colors,
-          and texture that one would be able to see in the initial sketch. If
-          adjustments were made in the toile, the same would be made in the new
-          pattern.
-        </p>
         <div>
+          <h2>Final Touches</h2>
+          <p>
+            Once the garment is made, the designer drapes the garment onto the
+            model or onto a mannequin. They need to make sure it falls just as
+            they wanted, and a critical eye is used to asses every little detail
+            to perfection before it goes out onto the runway.
+          </p>
           <img
-            id="image1"
-            src="./img/sewing-top.png"
-            alt="Top of blue sewing machine, loaded with red thread."
-          />
-        </div>
-        <div>
-          <img
-            id="image2"
-            class="animate__animated animate__shakeY animate__infinite"
-            src="./img/Fabric.png"
-            alt="Red, partially stitched fabric."
-          />
-        </div>
-        <div>
-          <img
-            id="image3"
-            src="./img/sewing-bottom.png"
-            alt="Bottom of blue sewing machine."
+            id="runway"
+            src="./img/walk.gif"
+            alt="Person with brown skin and dark hair walks in a red dress, black leggings, and high heels."
           />
         </div>
       </section>
 
       <section>
-        <h2>Final Touches</h2>
-        <p>
-          Once the garment is made, the designer drapes the garment onto the
-          model or onto a mannequin. They need to make sure it falls just as
-          they wanted, and a critical eye is used to asses every little detail
-          to perfection before it goes out onto the runway.
-        </p>
-        <img
-          id="runway"
-          src="./img/walk.gif"
-          alt="Person with brown skin and dark hair walks in a red dress, black leggings, and high heels."
-        />
-      </section>
+        <div>
+          <h2>Age of Success for Fashion Designers</h2>
+          <div
+            class="flourish-embed flourish-chart"
+            data-src="visualisation/4419988"
+          ></div>
+          <!-- Button to open the modal -->
+          <button id="open-button">Sources</button>
 
-      <section>
-        <h2>Age of Success for Fashion Designers</h2>
-        <div
-          class="flourish-embed flourish-chart"
-          data-src="visualisation/4419988"
-        ></div>
-        <!-- Button to open the modal -->
-        <button id="open-button">Sources</button>
-
-        <!-- The Modal (contains the Sign Up form) -->
-        <div id="modal" class="modal">
-          <span id="close-button" class="close" title="Close Modal">X</span>
-          <div class="modal-content">
-            <div class="container">
-              <ul>
-                <li>
-                  <a
-                    href="https://artsandculture.google.com/exhibit/12-stages-of-making-a-dress-with-a-fashion-student-manuella-numfor-mcensal-school-of-fashion-and-design/1gJCCV3zcuNLJA?hl=en"
-                    target="_blank"
-                  >
-                    12 Stages of Making a Dress
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://fashioninsiders.co/toolkit/business-basics/fashion-design-process-part2/"
-                    target="_blank"
-                  >
-                    Fashion Design Process
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://chart-studio.plotly.com/~ktcook/41.embed"
-                    target="_blank"
-                  >
-                    Age of Success for Fashion Designers
-                  </a>
-                </li>
-              </ul>
-              <div class="clearfix"></div>
+          <!-- The Modal (contains the Sign Up form) -->
+          <div id="modal" class="modal">
+            <span id="close-button" class="close" title="Close Modal">X</span>
+            <div class="modal-content">
+              <div class="container">
+                <ul>
+                  <li>
+                    <a
+                      href="https://artsandculture.google.com/exhibit/12-stages-of-making-a-dress-with-a-fashion-student-manuella-numfor-mcensal-school-of-fashion-and-design/1gJCCV3zcuNLJA?hl=en"
+                      target="_blank"
+                    >
+                      12 Stages of Making a Dress
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://fashioninsiders.co/toolkit/business-basics/fashion-design-process-part2/"
+                      target="_blank"
+                    >
+                      Fashion Design Process
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://chart-studio.plotly.com/~ktcook/41.embed"
+                      target="_blank"
+                    >
+                      Age of Success for Fashion Designers
+                    </a>
+                  </li>
+                </ul>
+                <div class="clearfix"></div>
+              </div>
             </div>
           </div>
         </div>
