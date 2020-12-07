@@ -38,24 +38,40 @@ function getOffset(element) {
     return { top: 0, left: 0 };
   }
 
-  let rect = element.getBoundingClientRect();
-  let win = element.ownerDocument.defaultView;
+  const rect = element.getBoundingClientRect();
+  const win = element.ownerDocument.defaultView;
   return {
-    top: rect.top + win.pageYOffset,
     left: rect.left + win.pageXOffset,
+    top: rect.top + win.pageYOffset,
   };
+}
+
+function getCoordinates(e, el) {
+  const isTouch = ["touchstart", "touchmove"].includes(e.type);
+  const { left, top } = getOffset(el);
+  const pageX = isTouch ? e.changedTouches[0].pageX : e.pageX;
+  const pageY = isTouch ? e.changedTouches[0].pageY : e.pageY;
+
+  return {
+    x: pageX - left,
+    y: pageY - top,
+  };
+}
+
+function getCoordinatesAndDraw(e, el, isDown) {
+  var { x, y } = getCoordinates(e, el);
+  draw(x, y, isDown);
 }
 
 /* Setup Event Handlers */
 function handleMouseDown(e) {
   mousePressed = true;
-  draw(e.pageX - getOffset(this).left, e.pageY - getOffset(this).top, false);
+  getCoordinatesAndDraw(e, this, false);
 }
 
 function handleMouseMove(e) {
-  if (mousePressed) {
-    draw(e.pageX - getOffset(this).left, e.pageY - getOffset(this).top, true);
-  }
+  if (!mousePressed) return false;
+  getCoordinatesAndDraw(e, this, true);
 }
 
 function handleMouseUp(e) {
@@ -63,6 +79,27 @@ function handleMouseUp(e) {
 }
 
 function handleMouseLeave(e) {
+  mousePressed = false;
+}
+
+function handleTouchStart(e) {
+  e.preventDefault();
+  mousePressed = true;
+  getCoordinatesAndDraw(e, this, false);
+}
+
+function handleTouchMove(e) {
+  e.preventDefault();
+
+  if (!mousePressed) return false;
+  getCoordinatesAndDraw(e, this, true);
+}
+
+function handleTouchEnd(e) {
+  mousePressed = false;
+}
+
+function handleTouchCancel(e) {
   mousePressed = false;
 }
 
@@ -79,6 +116,11 @@ canvas.addEventListener("mousedown", handleMouseDown);
 canvas.addEventListener("mousemove", handleMouseMove);
 canvas.addEventListener("mouseup", handleMouseUp);
 canvas.addEventListener("mouseleave", handleMouseLeave);
+
+canvas.addEventListener("touchstart", handleTouchStart);
+canvas.addEventListener("touchmove", handleTouchMove);
+canvas.addEventListener("touchend", handleTouchEnd);
+canvas.addEventListener("touchcancel", handleTouchCancel);
 
 selWidth.addEventListener("change", handleWidthUpdate);
 selColor.addEventListener("change", handleColorUpdate);
