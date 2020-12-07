@@ -221,20 +221,3 @@ button:hover {
   max-width: 500px;
   margin: 50px auto 0 auto;
 }
-
-/* Clear floats */
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-.clear {
-  background-color: red;
-  padding: 10px;
-  border-radius: 10px;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  width: 90px;
-  height: 40px;
-}
