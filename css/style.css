@@ -1,7 +1,7 @@
-/* Making snap Slideshow */
-
+/* Standard Element Styles */
 * {
   box-sizing: border-box;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 body {
@@ -9,40 +9,14 @@ body {
   padding: 0;
   overflow-y: hidden;
 }
-.slider {
-  font-family: sans-serif;
-  scroll-snap-type: x mandatory;
-  display: flex;
-  -webkit-overflow-scrolling: touch;
-  overflow-x: scroll;
-}
-section {
-  border-right: 1px solid white;
-  padding: 1rem;
-  min-width: 100vw;
-  height: 100vh;
-  scroll-snap-align: start;
-  text-align: center;
-  position: relative;
-}
 
-/* styling */
 h1 {
   text-align: center;
   color: black;
   width: 100%;
   left: 0;
   font-size: calc(1rem + 3vw);
-  font-family: Georgia, "Times New Roman", Times, serif;
   font-style: oblique;
-}
-
-h2 {
-  font-family: Georgia, "Times New Roman", Times, serif;
-}
-
-h3 {
-  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 ul {
@@ -59,6 +33,42 @@ img {
   width: 100%;
 }
 
+/* Slider Styles */
+.slider {
+  font-family: sans-serif;
+  scroll-snap-type: x mandatory;
+  display: flex;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: scroll;
+}
+
+/* Section Styles */
+section {
+  border-right: 1px solid white;
+  padding: 1rem;
+  min-width: 100vw;
+  height: 100vh;
+  scroll-snap-align: start;
+  text-align: center;
+  position: relative;
+}
+
+section > div {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+section#home {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+section#home > div {
+  max-width: 960px;
+}
+
+/* Pointing and Thinking Styles */
 .pointing-and-thinking {
   max-width: 350px;
   margin: 100px auto 0 auto;
@@ -70,6 +80,121 @@ img {
 
 .pointing-and-thinking > img:last-child {
   float: right;
+}
+
+/* Layout Styles */
+.column {
+  float: left;
+  width: 50%;
+  margin: auto;
+}
+
+.row:after {
+  content: "";
+
+  display: table;
+  clear: both;
+}
+
+/* Button Styles */
+button {
+  background-color: white;
+  box-shadow: 0 0 5px 0 gray;
+  color: black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity: 1;
+}
+
+/* Modal Styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #474e5d;
+  padding-top: 50px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.container {
+  padding: 16px;
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+#canvas-tools {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#canvas-tools > div {
+  margin: 10px;
+}
+
+/* Sewing Machine Styles */
+#sewing-machine {
+  width: 320px;
+  height: 320px;
+  position: relative;
+  margin: 50px auto 0 auto;
+}
+
+#sewing-machine-top,
+#sewing-machine-fabric,
+#sewing-machine-bottom {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+#sewing-machine-fabric {
+  width: 100px;
+}
+
+/* Image Sizing Styles */
+#sleeve {
+  max-width: 100px;
+  margin: 0 auto;
+}
+
+#shirt {
+  max-height: 200px;
+  width: auto;
+  margin: 0 auto;
 }
 
 #sketch {
@@ -97,81 +222,6 @@ img {
   margin: 50px auto 0 auto;
 }
 
-/*2 column layout*/
-.column {
-  float: left;
-  width: 50%;
-  margin: auto;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-
-  display: table;
-  clear: both;
-}
-
-/* Set a style for all buttons */
-button {
-  background-color: white;
-  box-shadow: 0 0 5px 0 gray;
-  color: black;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
-}
-
-button:hover {
-  opacity: 1;
-}
-
-/* Add padding to container elements */
-.container {
-  padding: 16px;
-}
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: #474e5d;
-  padding-top: 50px;
-}
-
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-}
-
-/* The Close Button (x) */
-.close {
-  position: absolute;
-  right: 35px;
-  top: 15px;
-  font-size: 40px;
-  font-weight: bold;
-  color: #f1f1f1;
-}
-
-.close:hover,
-.close:focus {
-  color: #f44336;
-  cursor: pointer;
-}
-
 /* Clear floats */
 .clearfix::after {
   content: "";
@@ -187,60 +237,4 @@ button:hover {
   -webkit-border-radius: 10px;
   width: 90px;
   height: 40px;
-}
-
-#canvas-tools {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#canvas-tools > div {
-  margin: 10px;
-}
-
-section > div {
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-section#home {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-section#home > div {
-  max-width: 960px;
-}
-
-#sleeve {
-  max-width: 100px;
-  margin: 0 auto;
-}
-
-#shirt {
-  max-height: 200px;
-  width: auto;
-  margin: 0 auto;
-}
-
-#sewing-machine {
-  width: 320px;
-  height: 320px;
-  position: relative;
-  margin: 50px auto 0 auto;
-}
-
-#sewing-machine-top,
-#sewing-machine-fabric,
-#sewing-machine-bottom {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-}
-
-#sewing-machine-fabric {
-  width: 100px;
 }
