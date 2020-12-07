@@ -113,6 +113,16 @@ button:hover {
   opacity: 1;
 }
 
+.clear {
+  background-color: red;
+  padding: 10px;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  width: 90px;
+  height: 40px;
+}
+
 /* Modal Styles */
 .modal {
   display: none; /* Hidden by default */
